@@ -1,0 +1,11 @@
+avalon/bin/
+avalon/obj/
+benchmark/
+console/bin/
+console/obj/
+lib/bin/
+lib/obj/
+lib.Tests/bin/
+lib.Tests/obj/
+misc/
+.vscode/
