@@ -17,13 +17,13 @@ public class Trans : ITrans
     _transTable = load.Load(fileName);
   }
 
-  public Trans(IEnumerable<string> strings)
+  public Trans(IReadOnlyCollection<string> strings)
   {
     LoadTransTable load = new();
     _transTable = load.Load(strings);
   }
 
-  public Trans(IEnumerable<ValueTuple<string, string>> coupleStrings)
+  public Trans(IReadOnlyCollection<ValueTuple<string, string>> coupleStrings)
   {
     LoadTransTable load = new();
     _transTable = load.Load(coupleStrings);

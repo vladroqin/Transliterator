@@ -65,7 +65,7 @@ public class LoadTransTable
   /// </summary>
   /// <param name="strings">Множество строк с правилами транслитерации, разделёнными табуляциями</param>
   /// <returns>Словарь с правилами</returns>
-  public IDictionary<char, Entity> Load(IEnumerable<string> strings)
+  public IDictionary<char, Entity> Load(IReadOnlyCollection<string> strings)
   {
     var workpiece = new List<(string, string)>(strings.Count());
     foreach (var e in strings)
@@ -81,7 +81,7 @@ public class LoadTransTable
   /// </summary>
   /// <param name="coupleStrings">Множество строк с правилами транслитерации и результатами</param>
   /// <returns>Словарь с правилами</returns>
-  public IDictionary<char, Entity> Load(IEnumerable<ValueTuple<string, string>> coupleStrings)
+  public IDictionary<char, Entity> Load(IReadOnlyCollection<ValueTuple<string, string>> coupleStrings)
   {
     var result = new Dictionary<char, Entity>(coupleStrings.Count());
     foreach (var e in coupleStrings)
