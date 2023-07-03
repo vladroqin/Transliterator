@@ -42,7 +42,7 @@ public class Trans : ITrans
     {
       if (foundEntity.Results == null)
       {
-        WorstCase(foundEntity, result, s[i]);
+        WorstCase(foundEntity, ref result, s[i]);
       }
       else
       {
@@ -55,12 +55,12 @@ public class Trans : ITrans
           }
           else
           {
-            WorstCase(foundEntity, result, s[i]);
+            WorstCase(foundEntity, ref result, s[i]);
           }
         }
         else
         {
-          WorstCase(foundEntity, result, s[i]);
+          WorstCase(foundEntity, ref result, s[i]);
         }
       }
     }
@@ -113,7 +113,7 @@ public class Trans : ITrans
   /// <param name="foundEntity">Ветка для транслитерации</param>
   /// <param name="result">Результат</param>
   /// <param name="si">Порядковый номер</param>
-  private void WorstCase(Entity foundEntity, StringBuilder result, char si)
+  private void WorstCase(Entity foundEntity, ref StringBuilder result, char si)
   {
     if (foundEntity.Result != default)
     {
